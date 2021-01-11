@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dzarezenko/beetroot2-gulp/issues"
   },
-  "homepage": "https://github.com/dzarezenko/beetroot2-gulp#readme"
+  "homepage": "https://github.com/dzarezenko/beetroot2-gulp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
