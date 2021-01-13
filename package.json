@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/dzarezenko/beetroot2-gulp#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
-  },
-  "dependencies": {
+    "@ionic/app-scripts": "3.2.4",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
-  }
+  },
+  "dependencies": {}
 }
