@@ -1,16 +1,21 @@
-'use strict';
+var { task, series, parallel, watch } = require('gulp');
+
+function task1(callback) {
+  console.log("Task 1...");
+
+  callback();
+}
+
+function task2(callback) {
+  console.log("Task 2...");
+
+  callback();
+}
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
- 
-sass.compiler = require('node-sass');
- 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+task('task1', task1);
+task('task2', task2);
+task('task3', series(task1, task2));
+task('task4', parallel(task1, task2));
+task('watch', () => {
+  watch('./sass/**/*.scss', series(task1, task2));
 });
