@@ -18,5 +18,8 @@
   "homepage": "https://github.com/dzarezenko/beetroot2-gulp#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.1.0"
   }
 }
